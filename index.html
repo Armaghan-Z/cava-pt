@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAVA Physical Therapy</title>
+  <meta name="description" content="Athlete-focused physical therapy built on clinical data. Performance restored, life reclaimed.">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__bar">
+    <a href="index.html" class="brand" aria-label="CAVA PT home">
+      <span class="brand__mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 4 15 20 18 12 22 12"/></svg></span>
+      CAVA<span class="brand__dot">.</span>PT
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span></button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="success-story.html">Patient Story</a></li>
+      <li><a href="care-plan.html">Care Plan</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="success-story.html" class="nav__cta">See Results</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow"></div><div class="gridlines"></div>
+    <div class="wrap">
+      <div class="hero__layout">
+        <div>
+          <span class="chip"><span class="chip__pulse"></span>Athlete-Focused Physical Therapy</span>
+          <h1>Performance <span class="hl">Restored.</span><span class="sub">Life reclaimed.</span></h1>
+          <p class="hero__text">We specialize in helping athletes recover from injuries and return to the sports they love — with plans built from real clinical data, not guesswork.</p>
+          <div class="hero__actions">
+            <a href="success-story.html" class="btn btn--mint">Read Jackson's Story
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="care-plan.html" class="btn btn--ghost">View Care Plans</a>
+          </div>
+        </div>
+
+        <div class="dial" data-dial aria-label="Animated goniometer showing wrist extension improving from 50 degrees at baseline to 70 degrees at week 12" role="img">
+          <div class="dial__head">
+            <span class="dial__label">Wrist Extension · Goniometer</span>
+            <span class="dial__live">LIVE</span>
+          </div>
+          <svg viewBox="0 0 320 252" aria-hidden="true">
+            <defs>
+              <linearGradient id="dg" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stop-color="#0B7A68"/><stop offset="1" stop-color="#45E3BF"/>
+              </linearGradient>
+            </defs>
+            <path d="M 30 170 A 130 130 0 0 1 290 170" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="14" stroke-linecap="round"/>
+            <path class="dial__fill" d="M 30 170 A 130 130 0 0 1 290 170" fill="none" stroke="url(#dg)" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="100 100" stroke-dashoffset="22.2"/>
+            <g class="dial__ticks"></g>
+            <circle cx="185.35" cy="26.22" r="5" fill="none" stroke="#BAC4D3" stroke-width="2"/>
+            <circle cx="271.84" cy="76.15" r="6" fill="#FF7A3D"/>
+            <g class="dial__needle" transform="rotate(50 160 170)">
+              <line x1="160" y1="170" x2="160" y2="62" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <circle cx="160" cy="170" r="10" fill="#45E3BF"/>
+            <circle cx="160" cy="170" r="4" fill="#0B1220"/>
+            <text class="dial__value" x="160" y="226" text-anchor="middle" font-size="46">70°</text>
+            <text class="dial__week" x="160" y="248" text-anchor="middle" font-size="10">WEEK 12 · RESTORED</text>
+          </svg>
+          <div class="dial__readout">
+            <div><span>Baseline</span><b>50°</b></div>
+            <div class="g"><span>Gain</span><b>+20°</b></div>
+            <div class="t"><span>Target</span><b>70°</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="stat__n"><span data-count="12">12</span></div><div class="stat__l">Weeks to recovery</div></div>
+        <div class="stat"><div class="stat__n"><span data-count="3">3</span><em>×</em></div><div class="stat__l">Weekly sessions</div></div>
+        <div class="stat"><div class="stat__n"><span data-count="100">100</span><em>%</em></div><div class="stat__l">Personalized</div></div>
+        <div class="stat"><div class="stat__n"><span data-count="3">3</span></div><div class="stat__l">Specialist team</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span class="ticker__item">Range of Motion</span><span class="ticker__item">ORIF</span><span class="ticker__item">Flexion</span><span class="ticker__item">Extension</span><span class="ticker__item">Proximal</span><span class="ticker__item">Distal</span><span class="ticker__item">Radius &amp; Ulna</span><span class="ticker__item">Dorsal</span><span class="ticker__item">Volar</span><span class="ticker__item">Return to Sport</span>
+      <span class="ticker__item">Range of Motion</span><span class="ticker__item">ORIF</span><span class="ticker__item">Flexion</span><span class="ticker__item">Extension</span><span class="ticker__item">Proximal</span><span class="ticker__item">Distal</span><span class="ticker__item">Radius &amp; Ulna</span><span class="ticker__item">Dorsal</span><span class="ticker__item">Volar</span><span class="ticker__item">Return to Sport</span>
+    </div>
+  </div>
+
+  <!-- WHAT IS PT -->
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow reveal">Physical Therapy 101</span>
+        <h2 class="title reveal">What is physical <span class="hl">therapy?</span></h2>
+        <div class="prose">
+          <p class="big reveal">Physical therapy is a healthcare specialty focused on restoring movement, reducing pain, and rebuilding strength after injury or surgery.</p>
+          <p class="reveal">A physical therapist assesses how your body moves and designs a fully personalized plan using exercises, manual therapy, and education to restore full function.</p>
+          <p class="reveal">For athletes, PT goes much further — it rebuilds not just the injured area but the entire kinetic chain, ensuring you return to sport with proper mechanics and dramatically reduced re-injury risk.</p>
+          <p class="reveal">Every treatment targets the root cause. Whether it's a fractured bone, torn ligament, or chronic joint pain, therapy addresses the specific muscles, bones, and connective tissues involved — not just the symptoms you feel.</p>
+        </div>
+      </div>
+
+      <aside class="glossary reveal" aria-label="Key clinical vocabulary">
+        <div class="glossary__head"><span>Key Clinical Vocabulary</span><span>06 terms</span></div>
+        <div class="term"><span class="term__tag">ROM</span><p><strong>Range of Motion</strong> — degrees a joint can move. Measured at every session to track healing progress precisely.</p></div>
+        <div class="term"><span class="term__tag">ORIF</span><p><strong>Open Reduction &amp; Internal Fixation</strong> — surgery that realigns broken bones using metal plates and screws.</p></div>
+        <div class="term"><span class="term__tag">FLEXION</span><p><strong>Flexion / Extension</strong> — bending toward the body vs. straightening away. Core movements we restore.</p></div>
+        <div class="term"><span class="term__tag">PROXIMAL</span><p><strong>Proximal / Distal</strong> — closer to the body's center vs. farther away. Critical for locating injuries accurately.</p></div>
+        <div class="term"><span class="term__tag">RADIUS/ULNA</span><p><strong>Forearm Bones</strong> — the two parallel bones. Radius = thumb side. Ulna = pinky side. Both fractured in Jackson's case.</p></div>
+        <div class="term"><span class="term__tag">DORSAL</span><p><strong>Dorsal / Volar</strong> — back of the hand vs. palm side. Swelling patterns help localize injuries.</p></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOCUS -->
+  <section class="section section--ink">
+    <div class="glow"></div>
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="eyebrow reveal">Our Focus</span>
+          <h2 class="title reveal">Built for athletes.<br><span class="hl">Backed by data.</span></h2>
+        </div>
+        <p class="lead reveal">At CAVA PT, every program is built around how your body performs — not just how it functions day-to-day. We speak the language of sport.</p>
+      </div>
+
+      <div class="bento">
+        <article class="bento__card wide reveal" data-spotlight>
+          <span class="bento__idx">01</span>
+          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3>Personalized Plans</h3>
+          <p>Built from your specific ROM data, injury mechanism, and sport demands — never a template.</p>
+        </article>
+        <article class="bento__card reveal" data-spotlight>
+          <span class="bento__idx">02</span>
+          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3>Data-Driven Progress</h3>
+          <p>ROM remeasured at every visit with a goniometer — so you see measurable numbers improve each week.</p>
+        </article>
+        <article class="bento__card reveal" data-spotlight>
+          <span class="bento__idx">03</span>
+          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Multidisciplinary Team</h3>
+          <p>Your care team includes a surgeon, hand therapist, and athletic trainer — all coordinating for you.</p>
+        </article>
+        <article class="bento__card wide reveal" data-spotlight>
+          <span class="bento__idx">04</span>
+          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Phased Return-to-Sport</h3>
+          <p>Three structured phases: acute recovery → strengthening → sport-specific conditioning. No shortcuts.</p>
+        </article>
+        <article class="bento__card wide reveal" data-spotlight>
+          <span class="bento__idx">05</span>
+          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h3>Home Exercise Programs</h3>
+          <p>Detailed take-home plans with 1–2 daily sessions — your most powerful recovery tool between visits.</p>
+        </article>
+        <article class="bento__card reveal" data-spotlight>
+          <span class="bento__idx">06</span>
+          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <h3>Mental Resilience</h3>
+          <p>Sports psychology rebuilds confidence to return to high-impact play — mental recovery matters as much as physical.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="section section--paper2">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="eyebrow reveal">Your Journey</span>
+          <h2 class="title reveal">What to expect at your visits</h2>
+        </div>
+        <p class="lead reveal">Physical therapy follows a structured progression. Here's what a patient's experience looks like — from evaluation to return-to-sport clearance.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="step p1 reveal">
+          <div class="step__top"><span class="step__num">01</span><span class="tag-phase">Phase 1 · Weeks 1–3</span></div>
+          <h3>Initial Evaluation</h3>
+          <p>A comprehensive ROM assessment using a goniometer. We document baseline measurements at every joint and review your imaging. This data becomes the benchmark for measuring all future progress.</p>
+          <div class="tags"><span class="tag">ROM Baseline</span><span class="tag">Strength Testing</span><span class="tag">Imaging Review</span></div>
+        </article>
+        <article class="step p1 reveal">
+          <div class="step__top"><span class="step__num">02</span><span class="tag-phase">Phase 1 · Weeks 1–3</span></div>
+          <h3>Acute Recovery</h3>
+          <p>Early sessions focus on swelling control and gentle pain-free ROM exercises for the wrist, elbow, and shoulder. You visit 2–3× per week and complete prescribed exercises twice daily at home.</p>
+          <div class="tags"><span class="tag">Swelling Control</span><span class="tag">Gentle ROM</span><span class="tag">Pain Management</span></div>
+        </article>
+        <article class="step p2 reveal">
+          <div class="step__top"><span class="step__num">03</span><span class="tag-phase">Phase 2 · Weeks 4–8</span></div>
+          <h3>Progressive Strengthening</h3>
+          <p>Once bone union is confirmed by your surgeon, we introduce progressive resistance targeting the FCU, brachialis, triceps, and deltoid. A hand therapist rebuilds fine motor skills for writing and typing.</p>
+          <div class="tags"><span class="tag">Resistance Training</span><span class="tag">Fine Motor Skills</span><span class="tag">Hand Therapy</span></div>
+        </article>
+        <article class="step p3 reveal">
+          <div class="step__top"><span class="step__num">04</span><span class="tag-phase">Phase 3 · Weeks 9–12</span></div>
+          <h3>Sport-Specific Return</h3>
+          <p>The final phase rebuilds sport-specific movement patterns — for basketball: overhead reach, catching, dribbling, and shooting. An athletic trainer guides protocols leading to surgeon clearance.</p>
+          <div class="tags"><span class="tag">Sport Drills</span><span class="tag">Functional Testing</span><span class="tag">Return-to-Play</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div class="glow"></div>
+        <div>
+          <h2>See how Jackson got back <span class="hl">on the court.</span></h2>
+          <p>A 20-year-old basketball player fractured both forearm bones. A data-driven 12-week plan got him dunking again.</p>
+        </div>
+        <div class="cta__actions">
+          <a href="success-story.html" class="btn btn--mint">Read the Story
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="exercises.html" class="btn btn--ghost">Exercise Program</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand"><span class="brand__mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 4 15 20 18 12 22 12"/></svg></span>CAVA<span class="brand__dot">.</span>PT</a>
+        <p class="footer__tag">Performance Restored. Life Reclaimed.</p>
+        <p class="footer__note">Athlete-focused physical therapy, built on measurable clinical data.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="success-story.html">Patient Story</a></li><li><a href="care-plan.html">Care Plan</a></li><li><a href="exercises.html">Exercises</a></li></ul>
+      </div>
+      <div>
+        <h4>The Case</h4>
+        <ul><li>Jackson, 20 · Basketball</li><li>Radius &amp; ulna fracture</li><li>ORIF · 12-week protocol</li></ul>
+      </div>
+    </div>
+    <div class="footer__word" aria-hidden="true">CAVA.PT</div>
+    <div class="footer__bottom"><span>HBS 1.3.1 · PLTW Physical Therapy — Design a Plan</span><span>&copy; 2026 CAVA PT</span></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise Plan — CAVA PT</title>
+  <meta name="description" content="A progressive, phase-based therapeutic exercise protocol for Jackson's forearm ORIF recovery.">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__bar">
+    <a href="index.html" class="brand" aria-label="CAVA PT home">
+      <span class="brand__mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 4 15 20 18 12 22 12"/></svg></span>
+      CAVA<span class="brand__dot">.</span>PT
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span></button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="success-story.html">Patient Story</a></li>
+      <li><a href="care-plan.html">Care Plan</a></li>
+      <li><a href="exercises.html" aria-current="page">Exercises</a></li>
+      <li><a href="success-story.html" class="nav__cta">See Results</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="glow"></div><div class="gridlines"></div>
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html">CAVA PT</a><span>/</span><b>Exercise Protocol</b></div>
+      <h1>Therapeutic <span class="hl">Exercise</span> Program</h1>
+      <p class="lead">A progressive, phase-based protocol for Jackson's bilateral forearm ORIF recovery — restoring grip strength, wrist ROM, and full return to competitive basketball.</p>
+      <div class="stats">
+        <div class="stat"><div class="stat__n"><span data-count="3">3</span></div><div class="stat__l">Core exercises</div></div>
+        <div class="stat"><div class="stat__n"><span data-count="12">12</span></div><div class="stat__l">Week program</div></div>
+        <div class="stat"><div class="stat__n"><span data-count="3">3</span><em>×</em></div><div class="stat__l">Sessions / week</div></div>
+        <div class="stat"><div class="stat__n"><span data-count="4">4</span></div><div class="stat__l">Maniken muscles</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSCLES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="eyebrow reveal">Anatomy &amp; Physiology</span>
+          <h2 class="title reveal">Forearm musculature — <span class="hl">Maniken model</span></h2>
+        </div>
+        <p class="lead reveal">Understanding the injured structures helps Jackson actively participate in his recovery. The four key muscles below directly govern forearm rotation and wrist stability.</p>
+      </div>
+      <div class="grid grid-4">
+        <article class="card card--lift p1 reveal">
+          <span class="tile" style="margin-bottom:22px">PT</span>
+          <div class="card__kicker">Forearm Pronation</div>
+          <h3 class="card__title">Pronator Teres</h3>
+          <p>Crosses the elbow obliquely from the medial epicondyle to the lateral radius. Rotates the forearm so the palm faces down. Primary target in early ROM exercises.</p>
+        </article>
+        <article class="card card--lift p1 reveal">
+          <span class="tile" style="margin-bottom:22px">SUP</span>
+          <div class="card__kicker">Forearm Supination</div>
+          <h3 class="card__title">Supinator</h3>
+          <p>Wraps around the proximal radius. Returns the palm to face upward. Works antagonistically with pronator teres; weakness here limits overhead ball-handling.</p>
+        </article>
+        <article class="card card--lift p2 reveal">
+          <span class="tile" style="margin-bottom:22px">FCR</span>
+          <div class="card__kicker">Wrist Flexion &amp; Abduction</div>
+          <h3 class="card__title">Flexor Carpi Radialis</h3>
+          <p>Runs from the medial epicondyle to the 2nd metacarpal. Flexes and radially deviates the wrist. Essential for grip and ball-handling control in basketball.</p>
+        </article>
+        <article class="card card--lift p2 reveal">
+          <span class="tile" style="margin-bottom:22px">ECU</span>
+          <div class="card__kicker">Wrist Extension &amp; Adduction</div>
+          <h3 class="card__title">Extensor Carpi Ulnaris</h3>
+          <p>Extends along the posterior forearm to the 5th metacarpal. Stabilizes the wrist during push-off and passing motions. Requires progressive loading during phases 2–3.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGRAM -->
+  <section class="section section--paper2">
+    <div class="wrap">
+      <div class="diagram reveal">
+        <div class="diagram__art">
+          <div class="glow"></div>
+          <svg viewBox="0 0 260 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forearm bone diagram showing the radius and ulna, ORIF plates, and fracture sites">
+            <rect x="90" y="10" width="80" height="30" rx="10" fill="#334155"/>
+            <text x="130" y="29" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#BAC4D3">Humerus</text>
+            <path d="M115 45 Q108 160 95 320 Q93 340 100 345 Q108 350 115 340 Q122 260 125 180 Q128 130 130 45Z" fill="#45E3BF" opacity=".5"/>
+            <text x="58" y="250" font-family="Inter,sans-serif" font-size="11" fill="#45E3BF" font-weight="700">Radius</text>
+            <path d="M140 45 Q148 160 158 290 Q162 320 160 345 Q155 355 148 345 Q143 270 138 180 Q135 130 130 45Z" fill="#A5B4FC" opacity=".5"/>
+            <text x="168" y="260" font-family="Inter,sans-serif" font-size="11" fill="#A5B4FC" font-weight="700">Ulna</text>
+            <line x1="112" y1="56" x2="64" y2="75" stroke="#8E9AAD" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="4" y="79" font-family="Inter,sans-serif" font-size="10" fill="#BAC4D3">Radial head</text>
+            <line x1="145" y1="50" x2="196" y2="68" stroke="#8E9AAD" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="198" y="72" font-family="Inter,sans-serif" font-size="10" fill="#BAC4D3">Olecranon</text>
+            <rect x="102" y="120" width="16" height="60" rx="4" fill="#FF7A3D"/>
+            <rect x="141" y="140" width="16" height="60" rx="4" fill="#FF7A3D"/>
+            <line x1="102" y1="128" x2="64" y2="118" stroke="#8E9AAD" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="8" y="116" font-family="Inter,sans-serif" font-size="10" fill="#FF7A3D" font-weight="600">ORIF plate</text>
+            <line x1="105" y1="330" x2="62" y2="352" stroke="#8E9AAD" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="2" y="364" font-family="Inter,sans-serif" font-size="10" fill="#BAC4D3">Distal radius</text>
+            <circle cx="110" cy="185" r="6" fill="#F87171"/>
+            <circle cx="151" cy="205" r="6" fill="#F87171"/>
+            <circle cx="110" cy="185" r="11" stroke="#F87171" stroke-width="1.5" opacity=".5"/>
+            <circle cx="151" cy="205" r="11" stroke="#F87171" stroke-width="1.5" opacity=".5"/>
+            <line x1="162" y1="205" x2="190" y2="190" stroke="#8E9AAD" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="192" y="186" font-family="Inter,sans-serif" font-size="10" fill="#F87171" font-weight="600">Fracture</text>
+            <text x="192" y="198" font-family="Inter,sans-serif" font-size="10" fill="#F87171" font-weight="600">sites</text>
+          </svg>
+        </div>
+        <div>
+          <span class="eyebrow">Surgical Hardware</span>
+          <h3>Bilateral ORIF — radial &amp; ulnar fixation</h3>
+          <p>Jackson sustained fractures to both the radius and ulna bilaterally, requiring Open Reduction and Internal Fixation (ORIF) surgery. Titanium plates and screws were inserted to stabilize the fracture sites while healing progresses.</p>
+          <p>The hardware remains in place long-term and provides a stable scaffold for progressive loading during rehabilitation. Exercise selection must avoid excessive torque forces at the fixation sites, particularly during the first 4 weeks.</p>
+          <ul class="bones">
+            <li><span><b>Radius:</b> lateral forearm bone, primary load-bearer</span></li>
+            <li><span><b>Ulna:</b> medial forearm bone, stabilizes rotation</span></li>
+            <li><span><b>DRUJ:</b> distal radioulnar joint — governs pro/supination</span></li>
+            <li><span><b>Interosseous membrane:</b> connects both bones, transfers forces</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXERCISES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="eyebrow reveal">The Protocol</span>
+          <h2 class="title reveal">Three core therapeutic exercises</h2>
+        </div>
+        <p class="lead reveal">Each exercise is chosen for its specificity to the injured structures and its progressive loading profile across the 12-week timeline.</p>
+      </div>
+
+      <div class="ex-list">
+
+        <article class="ex p1 reveal">
+          <header class="ex__head">
+            <div class="ex__num">01</div>
+            <div>
+              <div class="ex__phase">Phase 1 — Weeks 1–3 · Acute Protection</div>
+              <h3 class="ex__title">Passive Forearm Pro/Supination</h3>
+              <p class="ex__sub">Gravity-assisted, pain-free range-of-motion restoration</p>
+            </div>
+          </header>
+          <div class="ex__body">
+            <div class="ex__steps">
+              <div class="ex__step"><h4>Starting position</h4><p>Patient seated with elbow at 90° flexion, supported on a flat table. The opposite hand gently cradles the injured forearm just distal to the elbow joint, providing support without compressing the fracture sites.</p></div>
+              <div class="ex__step"><h4>Movement</h4><p>Using gravity and gentle passive assist from the contralateral hand, the forearm is slowly rotated from full supination (palm up) toward pronation (palm down) and back. The wrist should remain in a neutral position throughout — no forced end-range loading. Hold each end position for 3 seconds, breathing steadily.</p></div>
+              <div class="ex__step ex__step--warn"><h4>Precaution</h4><p>Stop immediately if pain exceeds 3/10 on the pain scale. This exercise must stay in the pain-free arc of motion. Swelling, warmth, or increased pain after exercise indicates excess dosage — reduce reps and notify the PT at the next session.</p></div>
+            </div>
+            <aside>
+              <div class="rx">
+                <div class="rx__title">Prescription</div>
+                <ul>
+                  <li><span class="k">Sets</span><span class="v">3</span></li>
+                  <li><span class="k">Reps</span><span class="v">10–15</span></li>
+                  <li><span class="k">Hold</span><span class="v">3 sec</span></li>
+                  <li><span class="k">Rest</span><span class="v">60 sec</span></li>
+                  <li><span class="k">Frequency</span><span class="v">2× daily</span></li>
+                </ul>
+              </div>
+              <div class="mods">
+                <div class="mods__title">Modifications</div>
+                <ul>
+                  <li>Pain &gt; 3/10: reduce arc by 10°</li>
+                  <li>Increased swelling: ice 10 min after</li>
+                  <li>Low pain tolerance: water-assisted in warm bath</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="ex p2 reveal">
+          <header class="ex__head">
+            <div class="ex__num">02</div>
+            <div>
+              <div class="ex__phase">Phase 2 — Weeks 4–8 · Active Strengthening</div>
+              <h3 class="ex__title">Wrist Flexion &amp; Extension with Dumbbell</h3>
+              <p class="ex__sub">Progressive resistance training for FCR and ECU activation</p>
+            </div>
+          </header>
+          <div class="ex__body">
+            <div class="ex__steps">
+              <div class="ex__step"><h4>Starting position</h4><p>Seated, forearm resting palm-up on a table with the wrist hanging slightly off the edge. Begin with a 1 lb dumbbell (or no weight if weight-bearing is still restricted). Perform flexion sets, then flip the forearm to perform extension sets separately — do not combine into one continuous movement.</p></div>
+              <div class="ex__step"><h4>Flexion phase</h4><p>Curl the wrist upward through the full available range (starting near the 50° baseline and progressing toward 80° as swelling resolves). Squeeze briefly at the top, then lower with control over 3 seconds. Tempo: 1 sec up / 1 sec hold / 3 sec down. The eccentric lowering phase is essential for tendon remodeling.</p></div>
+              <div class="ex__step"><h4>Extension phase</h4><p>Flip forearm to palm-down. Extend the wrist upward, keeping the fingers relaxed. Focus on moving through the available range without compensating with elbow or shoulder motion. Increase load by 0.5 lb only when 3 sets of 15 reps can be completed with no pain and good form for two consecutive sessions.</p></div>
+            </div>
+            <aside>
+              <div class="rx">
+                <div class="rx__title">Prescription</div>
+                <ul>
+                  <li><span class="k">Sets</span><span class="v">3</span></li>
+                  <li><span class="k">Reps</span><span class="v">12–15</span></li>
+                  <li><span class="k">Tempo</span><span class="v">1-1-3</span></li>
+                  <li><span class="k">Load</span><span class="v">1–3 lbs</span></li>
+                  <li><span class="k">Frequency</span><span class="v">3× weekly</span></li>
+                </ul>
+              </div>
+              <div class="mods">
+                <div class="mods__title">Modifications</div>
+                <ul>
+                  <li>Weak grip: use Theraputty instead of dumbbell</li>
+                  <li>Pain at end range: reduce arc by 15°</li>
+                  <li>Advanced: add radial/ulnar deviation sets</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="ex p3 reveal">
+          <header class="ex__head">
+            <div class="ex__num">03</div>
+            <div>
+              <div class="ex__phase">Phase 3 — Weeks 9–12 · Functional Return</div>
+              <h3 class="ex__title">Resistance Band Diagonal Chop — Sport-Specific Pattern</h3>
+              <p class="ex__sub">Closed-chain neuromuscular re-training for basketball mechanics</p>
+            </div>
+          </header>
+          <div class="ex__body">
+            <div class="ex__steps">
+              <div class="ex__step"><h4>Setup</h4><p>Anchor a light resistance band at shoulder height. Stand perpendicular to the anchor, feet shoulder-width apart in an athletic stance. Grip the band with both hands, injured limb on the distal end. Begin with the arms reaching across the body toward the anchor (loaded position).</p></div>
+              <div class="ex__step"><h4>Movement</h4><p>Drive the arms diagonally downward and across the body in a "chopping" pattern, fully extending at the end range. The movement integrates forearm pro/supination, wrist stabilization, shoulder rotation, and core engagement simultaneously — mirroring the mechanics of a basketball chest pass or crossover dribble.</p></div>
+              <div class="ex__step"><h4>Progression</h4><p>Weeks 9–10 use a light band with controlled tempo. Weeks 11–12 progress to a medium band with explosive concentric and controlled eccentric phases. The final two sessions may include a medicine ball variant (2 kg) with the team's athletic trainer supervising return-to-sport criteria. Full clearance requires 90% bilateral grip strength symmetry on dynamometry testing.</p></div>
+            </div>
+            <aside>
+              <div class="rx">
+                <div class="rx__title">Prescription</div>
+                <ul>
+                  <li><span class="k">Sets</span><span class="v">4</span></li>
+                  <li><span class="k">Reps</span><span class="v">10 each side</span></li>
+                  <li><span class="k">Band</span><span class="v">Light → Med</span></li>
+                  <li><span class="k">Rest</span><span class="v">90 sec</span></li>
+                  <li><span class="k">Frequency</span><span class="v">3× weekly</span></li>
+                </ul>
+              </div>
+              <div class="mods">
+                <div class="mods__title">Modifications</div>
+                <ul>
+                  <li>Low strength: seated version with lighter band</li>
+                  <li>Advanced: add deceleration stop at end range</li>
+                  <li>Sport return: medicine ball chest-pass variant</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESCRIPTION TABLE -->
+  <section class="section section--paper2">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="eyebrow reveal">Full Prescription</span>
+          <h2 class="title reveal">Exercise prescription summary</h2>
+        </div>
+        <p class="lead reveal">Complete dosage parameters for each exercise, organized by rehabilitation phase.</p>
+      </div>
+      <div class="table reveal">
+        <div class="table__scroll">
+          <table>
+            <thead><tr><th>Exercise</th><th>Phase</th><th>Sets</th><th>Reps / Duration</th><th>Load / Resistance</th><th>Frequency</th><th>Goal</th></tr></thead>
+            <tbody>
+              <tr><td class="strong">Passive Pro/Supination</td><td><span class="status p1">Phase 1</span></td><td class="num">3</td><td>10–15 reps, 3-sec hold</td><td>Gravity / passive</td><td>2× daily</td><td>Restore baseline ROM arc</td></tr>
+              <tr><td class="strong">Wrist Flexion/Extension</td><td><span class="status p2">Phase 2</span></td><td class="num">3</td><td>12–15 reps (1-1-3 tempo)</td><td>1–3 lbs dumbbell</td><td>3× weekly</td><td>Build FCR/ECU strength</td></tr>
+              <tr><td class="strong">Grip Strengthening</td><td><span class="status p2">Phase 2</span></td><td class="num">3</td><td>20 squeezes, 5-sec hold</td><td>Theraputty (medium)</td><td>Daily</td><td>Restore grip endurance</td></tr>
+              <tr><td class="strong">Diagonal Band Chop</td><td><span class="status p3">Phase 3</span></td><td class="num">4</td><td>10 reps each side</td><td>Light → medium band</td><td>3× weekly</td><td>Sport-specific neuromuscular re-training</td></tr>
+              <tr><td class="strong">Medicine Ball Chest Pass</td><td><span class="status p3">Phase 3</span></td><td class="num">3</td><td>8–10 reps</td><td>2 kg ball</td><td>2× weekly</td><td>Return-to-sport clearance criteria</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="table__hint">← Swipe to see the full table →</p>
+    </div>
+  </section>
+
+  <!-- DIRECTIONAL TERMS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="eyebrow reveal">Anatomical Language</span>
+          <h2 class="title reveal">Directional terms &amp; reference</h2>
+        </div>
+        <p class="lead reveal">Standard anatomical directional terms used throughout this program, referenced from the anatomical position (standing upright, palms forward).</p>
+      </div>
+      <div class="grid grid-auto">
+        <article class="card dir reveal"><div class="dir__term">Anterior<span>01</span></div><p>Toward the front of the body. The flexor compartment of the forearm is on the anterior side.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Posterior<span>02</span></div><p>Toward the back of the body. Extensor muscles run along the posterior forearm.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Medial<span>03</span></div><p>Toward the midline. The ulna is the medial bone of the forearm.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Lateral<span>04</span></div><p>Away from the midline. The radius is the lateral bone of the forearm.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Proximal<span>05</span></div><p>Closer to the origin (torso). The elbow joint is proximal to the wrist.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Distal<span>06</span></div><p>Farther from the origin. The wrist is distal to the elbow in the forearm.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Supination<span>07</span></div><p>Forearm rotation so the palm faces upward (superiorly); "holding a bowl of soup."</p></article>
+        <article class="card dir reveal"><div class="dir__term">Pronation<span>08</span></div><p>Forearm rotation so the palm faces downward (inferiorly); "pouring out the soup."</p></article>
+        <article class="card dir reveal"><div class="dir__term">Dorsal<span>09</span></div><p>The back surface of the hand or wrist. Extensor tendons run along the dorsal surface.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Volar / Palmar<span>10</span></div><p>The front surface of the hand. Flexor tendons and the carpal tunnel are volar structures.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Radial Deviation<span>11</span></div><p>Wrist movement toward the thumb side (radius). Limited by the radiocarpal ligaments.</p></article>
+        <article class="card dir reveal"><div class="dir__term">Ulnar Deviation<span>12</span></div><p>Wrist movement toward the pinky side (ulna). Important for writing and racket sports.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--tight" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div class="glow"></div>
+        <div>
+          <h2>Ready to see the <span class="hl">full recovery plan?</span></h2>
+          <p>Explore Jackson's goals, phase timeline, multidisciplinary team, and ROM tracking data.</p>
+        </div>
+        <div class="cta__actions">
+          <a href="care-plan.html" class="btn btn--mint">View Care Plan
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="success-story.html" class="btn btn--ghost">Patient Story</a>
+          <a href="index.html" class="btn btn--ghost">About CAVA PT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand"><span class="brand__mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 4 15 20 18 12 22 12"/></svg></span>CAVA<span class="brand__dot">.</span>PT</a>
+        <p class="footer__tag">Performance Restored. Life Reclaimed.</p>
+        <p class="footer__note">Athlete-focused physical therapy, built on measurable clinical data.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="success-story.html">Patient Story</a></li><li><a href="care-plan.html">Care Plan</a></li><li><a href="exercises.html">Exercises</a></li></ul>
+      </div>
+      <div>
+        <h4>The Case</h4>
+        <ul><li>Jackson, 20 · Basketball</li><li>Radius &amp; ulna fracture</li><li>ORIF · 12-week protocol</li></ul>
+      </div>
+    </div>
+    <div class="footer__word" aria-hidden="true">CAVA.PT</div>
+    <div class="footer__bottom"><span>HBS 1.3.1 · PLTW Physical Therapy — Design a Plan</span><span>&copy; 2026 CAVA PT</span></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
