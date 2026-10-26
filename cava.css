@@ -244,3 +244,4 @@ html:not(.js) .step__nav [data-next], html:not(.js) .step__nav [data-back] { dis
 .disclaimer { font-size: .8rem; color: var(--on-ink-3); margin-top: 10px; }
 .steps, .clip ol { list-style: none; }
 .xrays svg { max-height: 72vh; width: auto; max-width: 100%; margin: 0 auto; }
+.rom-art svg { max-height: 260px; margin: 0 auto; }
