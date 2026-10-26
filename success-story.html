@@ -166,9 +166,63 @@
         </article>
       </div>
       <div class="legend reveal">
-        <span class="p2"><i></i>Deficit — needs restoration</span>
-        <span class="ok"><i></i>Normal — within clinical range</span>
+        <span class="p2"><i></i>Below target</span>
+        <span class="ok"><i></i>Within clinical range</span>
       </div>
+
+      <figure class="chart reveal" aria-labelledby="rom-chart-title">
+        <figcaption>
+          <h3 class="card__title" id="rom-chart-title">ROM over time</h3>
+          <p>Filled dots are measured values. Hollow dots and dashed lines are goals, not results.</p>
+        </figcaption>
+        <ul class="chart__legend" aria-hidden="true">
+          <li><i class="chart__key chart__key--flex"></i>Wrist flexion</li>
+          <li><i class="chart__key chart__key--rad"></i>Radial deviation</li>
+        </ul>
+        <svg class="chart__svg" viewBox="0 0 640 310" role="img" aria-labelledby="rom-chart-title rom-chart-desc">
+          <desc id="rom-chart-desc">Wrist flexion measured 50 degrees at week 8, with goals of 60 degrees at week 12 and 75 to 80 degrees at month 6. Radial deviation measured 15 degrees at week 8, with a goal of 20 degrees at week 10.</desc>
+          <g class="chart__grid">
+            <line x1="60" x2="600" y1="270" y2="270"/><line x1="60" x2="600" y1="190" y2="190"/>
+            <line x1="60" x2="600" y1="110" y2="110"/><line x1="60" x2="600" y1="30" y2="30"/>
+          </g>
+          <g class="chart__axis">
+            <text x="50" y="274" text-anchor="end">0°</text><text x="50" y="194" text-anchor="end">30°</text>
+            <text x="50" y="114" text-anchor="end">60°</text><text x="50" y="34" text-anchor="end">90°</text>
+            <text x="60" y="294" text-anchor="middle">Wk 8</text><text x="120" y="294" text-anchor="middle">Wk 10</text>
+            <text x="180" y="294" text-anchor="middle">Wk 12</text><text x="600" y="294" text-anchor="middle">Month 6</text>
+          </g>
+          <path class="chart__line chart__line--flex" d="M60 136.7 L180 110 L600 56.7"/>
+          <path class="chart__line chart__line--rad" d="M60 230 L120 216.7"/>
+          <g class="chart__pt chart__pt--flex">
+            <circle cx="60" cy="136.7" r="6" class="is-measured"><title>Wrist flexion, week 8: 50° measured</title></circle>
+            <circle cx="180" cy="110" r="6"><title>Wrist flexion, week 12: 60° goal</title></circle>
+            <circle cx="600" cy="56.7" r="6"><title>Wrist flexion, month 6: 75 to 80° goal</title></circle>
+          </g>
+          <g class="chart__pt chart__pt--rad">
+            <circle cx="60" cy="230" r="6" class="is-measured"><title>Radial deviation, week 8: 15° measured</title></circle>
+            <circle cx="120" cy="216.7" r="6"><title>Radial deviation, week 10: 20° goal</title></circle>
+          </g>
+          <g class="chart__label">
+            <text x="72" y="152">50° baseline</text>
+            <text x="190" y="100">60° goal</text>
+            <text x="590" y="44" text-anchor="end">Flexion goal 75–80°</text>
+            <text x="132" y="212">Radial deviation goal 20°</text>
+            <text x="72" y="250">15° baseline</text>
+          </g>
+        </svg>
+        <details class="chart__table">
+          <summary>Show as a table</summary>
+          <table>
+            <thead><tr><th scope="col">Time</th><th scope="col">Wrist flexion</th><th scope="col">Radial deviation</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Week 8 (baseline)</th><td>50° measured</td><td>15° measured</td></tr>
+              <tr><th scope="row">Week 10</th><td>TBD by PT</td><td>20° goal</td></tr>
+              <tr><th scope="row">Week 12</th><td>60° goal</td><td>TBD by PT</td></tr>
+              <tr><th scope="row">Month 6</th><td>75–80° goal</td><td>TBD by PT</td></tr>
+            </tbody>
+          </table>
+        </details>
+      </figure>
     </div>
   </section>
 

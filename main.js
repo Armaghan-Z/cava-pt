@@ -76,7 +76,15 @@
     });
   });
 
-  // Goniometer dial (home hero): sweeps baseline 50° → target 70°
+  // Exercise demo videos: a wrapper stays hidden until data-video-src holds an embed URL
+  document.querySelectorAll('[data-video-src]').forEach(box => {
+    const src = box.dataset.videoSrc.trim();
+    if (!src) return;
+    box.querySelector('iframe').src = src;
+    box.hidden = false;
+  });
+
+  // Illustrative ROM tracker (home hero): flexion baseline 50°, week 12 goal 60°, long-term goal 80°
   const dial = document.querySelector('[data-dial]');
   if (dial) {
     const NS = 'http://www.w3.org/2000/svg';
@@ -126,20 +134,19 @@
     const wait = ms => new Promise(res => setTimeout(res, ms));
 
     if (reduce) {
-      set(70); weekEl.textContent = 'WEEK 12 · RESTORED';
+      set(80); weekEl.textContent = 'Long-term goal';
     } else {
       set(0);
+      // Plays once: baseline, then the week 12 goal, then the long-term goal
       onView([dial], async () => {
-        weekEl.textContent = 'WEEK 01 · BASELINE';
-        await tween(0, 50, 1300);
-        for (;;) {
-          await wait(1100);
-          weekEl.textContent = 'WEEK 12 · RESTORED';
-          await tween(50, 70, 1900);
-          await wait(2600);
-          weekEl.textContent = 'WEEK 01 · BASELINE';
-          await tween(70, 50, 1200);
-        }
+        weekEl.textContent = 'Baseline, week 8';
+        await tween(0, 50, 1100);
+        await wait(700);
+        weekEl.textContent = 'Goal, week 12';
+        await tween(50, 60, 900);
+        await wait(700);
+        weekEl.textContent = 'Long-term goal';
+        await tween(60, 80, 1100);
       }, 0.3);
     }
   }
