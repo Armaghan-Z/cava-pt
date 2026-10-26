@@ -50,7 +50,10 @@
     if (!def) return;
     active?.setAttribute('aria-expanded', 'false');
     active = el; pinned = pin;
-    pop.innerHTML = `<b>${el.textContent.trim()}</b>${def}`;
+    pop.textContent = '';
+    const termLabel = document.createElement('b');
+    termLabel.textContent = el.textContent.trim();
+    pop.append(termLabel, document.createTextNode(def));
     pop.hidden = false;
     el.setAttribute('aria-expanded', 'true');
     place(el);

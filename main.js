@@ -57,6 +57,16 @@
     requestAnimationFrame(tick);
   }, 0.5);
 
+  // Progress bars
+  const bars = [...document.querySelectorAll('.bar__fill')];
+  if (!reduce) bars.forEach(b => { b.dataset.w = b.style.width; b.style.width = '0'; });
+  onView(bars, b => { if (b.dataset.w) b.style.width = b.dataset.w; }, 0.3);
+
+  // ROM rings (circles use pathLength="100"; final offset is in the markup)
+  const rings = [...document.querySelectorAll('.ring__fill')];
+  if (!reduce) rings.forEach(r => { r.dataset.o = r.getAttribute('stroke-dashoffset'); r.style.strokeDashoffset = '100'; });
+  onView(rings, r => { if (r.dataset.o) r.style.strokeDashoffset = r.dataset.o; }, 0.3);
+
   // Spotlight hover on dark cards
   document.querySelectorAll('[data-spotlight]').forEach(card => {
     card.addEventListener('pointermove', e => {
@@ -65,4 +75,83 @@
       card.style.setProperty('--my', `${e.clientY - r.top}px`);
     });
   });
+
+  // Exercise demo videos: a wrapper stays hidden until data-video-src holds an embed URL
+  document.querySelectorAll('[data-video-src]').forEach(box => {
+    const src = box.dataset.videoSrc.trim();
+    if (!src) return;
+    box.querySelector('iframe').src = src;
+    box.hidden = false;
+  });
+
+  // Illustrative ROM tracker (home hero): flexion baseline 50°, week 12 goal 60°, long-term goal 80°
+  const dial = document.querySelector('[data-dial]');
+  if (dial) {
+    const NS = 'http://www.w3.org/2000/svg';
+    const cx = 160, cy = 170, r = 130;
+    const pt = (v, rad) => {
+      const a = (180 - v * 2) * Math.PI / 180;
+      return [cx + rad * Math.cos(a), cy - rad * Math.sin(a)];
+    };
+    const ticks = dial.querySelector('.dial__ticks');
+    for (let v = 0; v <= 90; v += 2.5) {
+      const major = v % 15 === 0;
+      const [x1, y1] = pt(v, r - 14);
+      const [x2, y2] = pt(v, r - (major ? 28 : 20));
+      const line = document.createElementNS(NS, 'line');
+      Object.entries({ x1, y1, x2, y2, stroke: major ? '#BAC4D3' : 'rgba(255,255,255,.28)', 'stroke-width': major ? 2 : 1, 'stroke-linecap': 'round' })
+        .forEach(([k, val]) => line.setAttribute(k, val));
+      ticks.appendChild(line);
+      if (major) {
+        const [tx, ty] = pt(v, r - 44);
+        const t = document.createElementNS(NS, 'text');
+        Object.entries({ x: tx, y: ty + 4, 'text-anchor': 'middle', 'font-size': 11, fill: '#8E9AAD', 'font-family': 'JetBrains Mono, monospace' })
+          .forEach(([k, val]) => t.setAttribute(k, val));
+        t.textContent = v + '°';
+        ticks.appendChild(t);
+      }
+    }
+
+    const fill = dial.querySelector('.dial__fill');
+    const needle = dial.querySelector('.dial__needle');
+    const valueEl = dial.querySelector('.dial__value');
+    const weekEl = dial.querySelector('.dial__week');
+    const set = v => {
+      fill.style.strokeDashoffset = 100 - (v / 90) * 100;
+      needle.setAttribute('transform', `rotate(${-90 + v * 2} ${cx} ${cy})`);
+      valueEl.textContent = Math.round(v) + '°';
+    };
+    const tween = (from, to, dur) => new Promise(done => {
+      const start = performance.now();
+      const step = now => {
+        const t = Math.min((now - start) / dur, 1);
+        const e = t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        set(from + (to - from) * e);
+        t < 1 ? requestAnimationFrame(step) : done();
+      };
+      requestAnimationFrame(step);
+    });
+    const wait = ms => new Promise(res => setTimeout(res, ms));
+
+    if (reduce) {
+      set(80); weekEl.textContent = 'LONG-TERM GOAL';
+    } else {
+      set(0);
+      onView([dial], async () => {
+        weekEl.textContent = 'WEEK 8 · BASELINE';
+        await tween(0, 50, 1300);
+        for (;;) {
+          await wait(1100);
+          weekEl.textContent = 'WEEK 12 · GOAL';
+          await tween(50, 60, 1200);
+          await wait(1100);
+          weekEl.textContent = 'LONG-TERM GOAL';
+          await tween(60, 80, 1500);
+          await wait(2600);
+          weekEl.textContent = 'WEEK 8 · BASELINE';
+          await tween(80, 50, 1200);
+        }
+      }, 0.3);
+    }
+  }
 })();
