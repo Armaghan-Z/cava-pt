@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Jackson's Story — CAVA PT</title>
-  <meta name="description" content="Jackson's injury, surgery, and the bones and muscles his recovery plan focuses on.">
+  <meta name="description" content="How Jackson broke his radius and ulna at the rim, what surgery fixed, and the plan getting him back to basketball.">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cava.css">
 </head>
 <body>
 
@@ -25,9 +27,10 @@
     <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span></button>
     <ul class="nav__links" id="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="success-story.html" aria-current="page">Jackson's Story</a></li>
-      <li><a href="care-plan.html">Expected Treatment</a></li>
-      <li><a href="exercises.html" class="nav__cta">Recovery Exercises</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="success-story.html" aria-current="page">Patient Story</a></li>
+      <li><a href="care-plan.html">Care Plan</a></li>
+      <li><a href="exercises.html" class="nav__cta">Exercises</a></li>
     </ul>
   </div>
 </header>
@@ -37,101 +40,171 @@
   <section class="page-hero">
     <div class="glow"></div><div class="gridlines"></div>
     <div class="wrap">
-      <div class="crumbs"><a href="index.html">CAVA PT</a><span>/</span><b>Jackson's Story</b></div>
+      <div class="crumbs"><a href="index.html">CAVA PT</a><span>/</span><b>Patient Story</b></div>
       <h1>Jackson's <span class="hl">Story</span></h1>
-      <p class="lead">How a basketball player broke both bones in his forearm, and how we're helping him get back on the court.</p>
       <div class="meta-row">
-        <span class="meta">Injury <b>Distal radius &amp; ulna</b></span>
+        <span class="meta">Sport <b>Basketball</b></span>
         <span class="meta">Arm <b>Right</b></span>
-        <span class="meta">Surgery <b>Plates &amp; screws</b></span>
+        <span class="meta">Bones <b>Radius &amp; ulna</b></span>
         <span class="meta">Status <b>Bones healed</b></span>
       </div>
     </div>
   </section>
 
+  <!-- 1-3 Injury -->
+  <section class="scene" aria-labelledby="h-rim">
+    <div class="scene__stage">
+      <div class="wrap ed">
+        <div class="ed__text">
+          <span class="kicker">01 · The injury</span>
+          <h2 class="big" id="h-rim">Rim <span class="hl">Check</span></h2>
+          <p class="team-text" style="margin-top:24px">Jackson was competing in an energetic pickup basketball game when he went up for a dunk and caught his right arm on the rim. The fall sent his full body weight through the right forearm, which was trapped in the rim, resulting in a complete fracture of both the <em class="term" data-term="radius">radius</em> and <em class="term" data-term="ulna">ulna</em>.</p>
+          <ol class="steps" aria-label="Animation steps">
+            <li data-step>Approach</li><li data-step>Take off</li><li data-step>Arm catches the rim</li><li data-step>Weight through the forearm</li><li data-step>Down</li>
+          </ol>
+        </div>
+        <div class="ed__art art" id="injury-scene" data-label="Clipart animation: Jackson runs in, jumps for a dunk, his right forearm catches on the rim, and he falls with his weight through that forearm."></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-5 X-ray -->
+  <section class="scene scene--ink" aria-label="X-rays">
+    <div class="scene__stage" id="xray-scene">
+      <div class="wrap ed ed--flip">
+        <div class="ed__text">
+          <span class="kicker">02 · Emergency department</span>
+          <p class="team-text">At GNMH's Emergency Department, <em class="term" data-term="anteroposterior">anteroposterior</em> and <em class="term" data-term="lateral x-rays">lateral X-rays</em> confirmed a <em class="term" data-term="displaced proximal forearm fracture">displaced proximal forearm fracture</em></p>
+          <ol class="steps" aria-label="What the X-ray shows">
+            <li data-step class="on">Fracture lines</li><li data-step class="on">Fragments shift</li>
+          </ol>
+        </div>
+        <div class="ed__art xrays">
+          <figure><div data-xray="ap:broken"></div><figcaption>Front view (AP)</figcaption></figure>
+          <figure><div data-xray="lat:broken"></div><figcaption>Side view (lateral)</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6-7 Hand exam -->
+  <section class="section section--paper2">
+    <div class="wrap ed">
+      <div class="ed__text">
+        <span class="kicker">03 · Physical exam</span>
+        <p class="team-text">Physical exam found swelling over the <em class="term" data-term="dorsal">dorsal</em> hand and fingers, but sensation, circulation, and active finger extension remained fully intact. <em class="term" data-term="neurovascular">Neurovascular</em> status was intact, indicating no major nerve or blood vessel damage.</p>
+        <ul class="badges" aria-label="Exam results">
+          <li class="badge">Sensation intact</li>
+          <li class="badge">Circulation intact</li>
+          <li class="badge">Finger extension intact</li>
+        </ul>
+      </div>
+      <div class="ed__art" style="grid-column: 7 / span 5">
+        <div class="hand" data-hand></div>
+        <div style="text-align:center"><button type="button" class="btn btn--outline toggle" data-swell-toggle aria-pressed="false">Show swelling</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8-10 Surgery -->
   <section class="section">
-    <div class="wrap story-grid">
-      <aside class="profile reveal" aria-label="Patient profile">
-        <div class="profile__top">
-          <div class="glow"></div>
-          <img class="profile__photo" src="images/story-header.png" alt="Jackson">
-          <div class="profile__name">Jackson</div>
-          <div class="profile__sub">Basketball Player</div>
+    <div class="wrap ed">
+      <div class="ed__text">
+        <span class="kicker">04 · Surgery</span>
+        <h2 class="big">Bolted Back <span class="hl">Together</span></h2>
+      </div>
+      <div class="ed__art">
+        <p class="team-text">Eight weeks before his first physical therapy visit, Jackson underwent <em class="term" data-term="open reduction and internal fixation (orif)">Open Reduction and Internal Fixation (ORIF)</em>. Both fractured bones were moved back into alignment and secured with metal plates and screws. A <em class="term" data-term="cock-up plaster splint">cock-up plaster splint</em> was applied after surgery and remained in place throughout the immobilization period (weeks 1 to 8) to protect the hardware and keep the wrist in position. During those weeks, he could only gently move his fingers and shoulder.</p>
+      </div>
+      <div class="ed__wide" style="max-width:860px;margin:24px auto 0;width:100%">
+        <div class="ba">
+          <div class="ba__layer ba__layer--before"><div data-xray="ap:broken"></div><div data-xray="lat:broken"></div></div>
+          <div class="ba__layer ba__layer--after"><div data-xray="ap:fixed"></div><div data-xray="lat:fixed"></div></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before surgery and after ORIF">
+          <div class="ba__line" aria-hidden="true"></div>
         </div>
-        <div class="profile__body">
-          <ul class="kv">
-            <li><span class="k">Injury</span><span class="v">Distal radius + ulna</span></li>
-            <li><span class="k">Arm</span><span class="v">Right</span></li>
-            <li><span class="k">Fracture type</span><span class="v">Transverse</span></li>
-            <li><span class="k">Surgery</span><span class="v">Plates &amp; screws</span></li>
-            <li><span class="k">PT sessions</span><span class="v">3–4× a week</span></li>
-            <li><span class="k">Home exercises</span><span class="v">Daily</span></li>
-            <li><span class="k">Status</span><span class="status ok">Bones healed</span></li>
-          </ul>
-        </div>
-      </aside>
-
-      <div class="story">
-        <h3 class="reveal"><span>01</span>The Injury</h3>
-        <p class="reveal">Jackson loves basketball and would play all day if he could. One day he went up for a dunk, his arm got caught in the rim, and he fell hard and landed awkwardly on the ground. He came in with a painful, swollen right arm.</p>
-
-        <figure class="photo photo--xray reveal">
-          <img src="images/broken-arm.png" alt="X-ray of Jackson's broken radius and ulna" onerror="this.closest('figure').hidden=true">
-          <figcaption>Initial Injury X-Ray</figcaption>
-        </figure>
-
-        <h3 class="reveal"><span>02</span>The X-Ray</h3>
-        <p class="reveal">His X-ray showed a lot of swelling and a break in both the <strong>distal radius and ulna</strong> of his right arm, the one that got stuck in the hoop. The break was badly displaced, so he needed surgery to keep the bones stable.</p>
-
-        <figure class="photo photo--xray reveal">
-          <img src="images/broken-arm2.png" alt="X-ray after surgery showing the metal plates and screws" onerror="this.closest('figure').hidden=true">
-          <figcaption>Post-Surgery X-Ray</figcaption>
-        </figure>
-
-        <h3 class="reveal"><span>03</span>The Surgery</h3>
-        <p class="reveal">Surgeons put in <strong>metal plates and screws</strong> to hold the bones in place and make sure they lined up the right way. It was most likely a <strong>transverse fracture</strong>, since the break goes almost straight across and is perpendicular to the bone. Hitting the rim bent the bones with so much force that they eventually broke.</p>
-
-        <h3 class="reveal"><span>04</span>Where He Is Now</h3>
-        <p class="reveal">Jackson spent about 8 weeks in a cast or splint, doing gentle finger and shoulder movements so he wouldn't get stiff. His radius and ulna are now <strong>fully healed</strong>, so the next step is exercises to get back the range of motion in his wrist.</p>
-        <p class="reveal">Because the break was severe and badly displaced, there was a lot of soft tissue damage around it. His flexibility should come back within a few weeks of starting PT, but getting all his strength back for basketball will take more time.</p>
+        <div class="ba__tags"><span>Before: broken radius and ulna</span><span>After: two plates and screws</span></div>
       </div>
     </div>
   </section>
 
+  <!-- 11 Goals -->
+  <section class="goals" id="goals" aria-labelledby="h-goals">
+    <div class="goals__stage">
+      <div class="wrap" style="width:100%">
+        <div class="clip">
+          <h2 id="h-goals">Jackson's Goals <small>#23 · Right arm</small></h2>
+          <ol>
+            <li class="goal"><span class="goal__check"><svg viewBox="0 0 24 24" fill="none" stroke="#0B1220" stroke-width="3.5" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><p>Jackson wanted to return to basketball and play at his full capacity. One of his personal goals was to make the dunk that injured him.</p></li>
+            <li class="goal"><span class="goal__check"><svg viewBox="0 0 24 24" fill="none" stroke="#0B1220" stroke-width="3.5" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><p>Jackson wanted to restore his daily hand functions, and be able to write, type, and drive</p></li>
+            <li class="goal"><span class="goal__check"><svg viewBox="0 0 24 24" fill="none" stroke="#0B1220" stroke-width="3.5" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><p>ROM goals: wrist <em class="term" data-term="flexion">flexion</em> from 50 to 60 degrees and <em class="term" data-term="radial deviation">radial deviation</em> from 15 to 20 degrees, then 75 to 80 degrees of flexion by month 6.</p></li>
+            <li class="goal"><span class="goal__check"><svg viewBox="0 0 24 24" fill="none" stroke="#0B1220" stroke-width="3.5" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><p>Jackson wanted to regain his confidence and overcome his anxiety risking re-injury at rim. He wanted his competitive edge back. <em class="term" data-term="kinesiophobia">Kinesiophobia</em> is a fear of moving because you're afraid of getting hurt again. It's common and treatable.</p></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 Rehab -->
+  <section class="section">
+    <div class="wrap ed">
+      <div class="ed__narrow">
+        <span class="kicker">05 · Rehab</span>
+        <h2 class="title">Jackson's Rehabilitation <span class="hl">Journey</span></h2>
+        <p class="team-text" style="margin-top:18px">Jackson's bones are now fully healed after a successful orthopedic repair that led to two months of healing. Now Jackson wants to regain all the <em class="term" data-term="range of motion">range of motion</em> he lost in his forearm after the fracture and long periods of no movement. This requires PT, where we have made a plan to restore motion</p>
+      </div>
+      <div class="ed__wide plan-card">
+        <div class="plan-card__top">
+          <span class="tag">Built for Jackson</span>
+          <dl>
+            <div><dt>Patient</dt><dd>Jackson</dd></div>
+            <div><dt>Sport</dt><dd>Basketball</dd></div>
+            <div><dt>Wrist flexion</dt><dd>50°</dd></div>
+            <div><dt>Radial deviation</dt><dd>15°</dd></div>
+          </dl>
+        </div>
+        <div class="phases">
+          <div class="phase p1"><span>Weeks ~1-6</span><b>Range of motion</b>Wrist flexion off a table, wrist circles, supination and pronation</div>
+          <div class="phase p2"><span>Weeks ~6-12</span><b>Resistance</b>Wrist curls, wrist extensions, wall pressure</div>
+          <div class="phase p3"><span>Weeks ~12+</span><b>Return to sport</b>Ball handling, catching, shooting, with surgeon clearance</div>
+        </div>
+        <div class="plan-card__foot"><a href="care-plan.html" class="btn btn--ink">See the full care plan <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 Network -->
   <section class="section section--paper2">
     <div class="wrap">
-      <div class="section-head section-head--split">
-        <div>
-          <span class="eyebrow reveal">Description of the Condition</span>
-          <h2 class="title reveal">The bones and muscles <span class="hl">involved</span></h2>
-        </div>
-        <p class="lead reveal">There are a lot of muscles in the wrist, called the carpal muscles. These are the bones and muscles his plan focuses on, and what working them will do for him.</p>
+      <span class="tag tag--mint">From the CAVA network</span>
+      <h2 class="title" style="margin:16px 0 32px">Jackson's Care <span class="hl">Network</span></h2>
+      <div class="net">
+        <article class="card"><span class="mono" aria-hidden="true">OS</span><p>Jackson's care plan will also involve an orthopedic surgeon to monitor surgical hardware and bone healing.</p></article>
+        <article class="card"><span class="mono" aria-hidden="true">HT</span><p>An occupational therapist or certified hand therapist will help him rebuild fine motor skills for daily activities.</p></article>
+        <article class="card"><span class="mono" aria-hidden="true">MP</span><p>Throughout his recovery, Jackson will work closely with a <em class="term" data-term="certified mental performance consultant">Certified Mental Performance Consultant</em> to overcome his <em class="term" data-term="kinesiophobia">Kinesiophobia</em></p></article>
+        <article class="card"><span class="mono" aria-hidden="true">AT</span><p>Later in his recovery, an athletic trainer or strength coach can help him condition safely for his return to basketball.</p></article>
       </div>
+    </div>
+  </section>
+
+  <!-- 14 Interventions -->
+  <section class="section section--ink">
+    <div class="glow"></div>
+    <div class="wrap">
+      <span class="kicker">Additional Interventions</span>
+      <blockquote class="pull">As co-founder Vasanth says, "The best way to attack the rim is from multiple angles."</blockquote>
       <div class="grid grid-2">
-        <article class="card card--accent card--lift ok reveal"><div class="card__kicker">Bones · Fully healed</div><h3 class="card__title">Radius &amp; Ulna</h3><p>The two bones in his forearm that broke. They're healed now, so we can start working on his wrist's range of motion.</p></article>
-        <article class="card card--accent card--lift p1 reveal"><div class="card__kicker">Muscle · Radial deviation</div><h3 class="card__title">Extensor Carpi Radialis Longus</h3><p>Moves the wrist toward the thumb side. Working it will help him turn his wrist inward on the thumb side more.</p></article>
-        <article class="card card--accent card--lift p2 reveal"><div class="card__kicker">Muscle · Wrist flexion</div><h3 class="card__title">Flexor Carpi Ulnaris</h3><p>One of the muscles that bends the wrist. Working it will help him bend his wrist toward himself more.</p></article>
-        <article class="card card--accent card--lift p3 reveal"><div class="card__kicker">Muscle · Wrist flexion</div><h3 class="card__title">Flexor Carpi Radialis</h3><p>Also helps bend the wrist. Together with the flexor carpi ulnaris, it's key to getting his flexion back.</p></article>
+        <article class="icard"><span data-icon="brace"></span><p>Beyond exercise, Jackson will have access to our custom <em class="term" data-term="wrist orthotics and ergonomic assistive devices">wrist orthotics and ergonomic assistive devices</em> to protect his arm during daily activities like typing or studying.</p></article>
+        <article class="icard"><span data-icon="water"></span><p>Additionally, advanced recovery interventions such as high-intensity contrast hydrotherapy or low-level laser therapy will be used to accelerate soft tissue healing and control inflammation.</p></article>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--paper2">
-    <div class="wrap">
-      <figure class="quote reveal">
-        <div class="glow"></div>
-        <img class="quote__stars" src="images/story-end.jpg" alt="5 out of 5 stars">
-        <blockquote>I liked that my physical therapists made a plan just for me. They worked closely with me and gave me exercises that targeted my injured arm, and every session worked on my wrist strength, flexibility and range of motion. They told me why each exercise mattered and made sure I was doing it right so I wouldn't get hurt again. They also changed my plan as I got better and when my schedule got busy. Over time I could really feel the difference, and I felt confident using my arm again. Their help are getting me back to playing basketball safely.</blockquote>
-        <cite>— Jackson's Review</cite>
-      </figure>
     </div>
   </section>
 
   <section class="section section--tight">
     <div class="wrap">
       <nav class="pager" aria-label="Page navigation">
-        <a href="index.html" class="prev"><span class="pager__label">Previous</span><span class="pager__title"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Home</span></a>
-        <a href="care-plan.html" class="next"><span class="pager__label">Next</span><span class="pager__title">Expected Treatment<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        <a href="our-story.html" class="prev"><span class="pager__label">Previous</span><span class="pager__title"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Our Story</span></a>
+        <a href="care-plan.html" class="next"><span class="pager__label">Next</span><span class="pager__title">Care Plan<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
       </nav>
     </div>
   </section>
@@ -148,7 +221,7 @@
       </div>
       <div>
         <h4>Pages</h4>
-        <ul><li><a href="index.html">Home</a></li><li><a href="success-story.html">Jackson's Story</a></li><li><a href="care-plan.html">Expected Treatment</a></li><li><a href="exercises.html">Recovery Exercises</a></li></ul>
+        <ul><li><a href="index.html">Home</a></li><li><a href="our-story.html">Our Story</a></li><li><a href="success-story.html">Patient Story</a></li><li><a href="care-plan.html">Care Plan</a></li><li><a href="exercises.html">Exercises</a></li></ul>
       </div>
       <div>
         <h4>Our Team</h4>
@@ -157,9 +230,13 @@
     </div>
     <div class="footer__word" aria-hidden="true">CAVA.PT</div>
     <div class="footer__bottom"><span>HBS 1.3.1 · PLTW Physical Therapy — Design a Plan</span><span>&copy; 2026 CAVA PT</span></div>
+    <p class="disclaimer">Educational project for PLTW Human Body Systems. Fictional practice and patient case. Not medical advice.</p>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="main.js"></script>
+<script src="cava.js"></script>
 </body>
 </html>
