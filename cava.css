@@ -246,3 +246,21 @@ html:not(.js) .step__nav [data-next], html:not(.js) .step__nav [data-back] { dis
 .xrays svg { max-height: 72vh; width: auto; max-width: 100%; margin: 0 auto; }
 .rom-art svg { max-height: 260px; margin: 0 auto; }
 .hero-heads { min-height: 2em; }
+
+/* ---------- Refinements ---------- */
+.nav__links a { position: relative; background: none !important; }
+.nav__links a::after { content: ''; position: absolute; left: 50%; right: 50%; bottom: 4px; height: 2px; background: var(--mint); border-radius: 2px; transition: left .25s var(--ease), right .25s var(--ease); }
+.nav__links a:hover::after, .nav__links a[aria-current="page"]::after { left: 16px; right: 16px; }
+.nav__links a[aria-current="page"] { color: #fff; }
+.subnav { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; border: 1px solid var(--ink-line); margin-bottom: 26px; }
+.subnav a { padding: 8px 18px; border-radius: 999px; color: var(--on-ink-2); text-decoration: none; font-weight: 600; font-size: .92rem; }
+.subnav a[aria-current="page"] { background: var(--mint); color: var(--ink); }
+.hero-heads { display: grid; min-height: 0; }
+.hero-heads [data-step] { position: static; grid-area: 1 / 1; }
+.watch { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--teal-ink); }
+.interventions { background: var(--paper-2); }
+.interventions .pull { color: var(--ink); }
+.interventions .icard { background: var(--card); border: 0; box-shadow: var(--sh-1); color: var(--text); font-size: 1.1rem; line-height: 1.6; padding: 32px; grid-template-columns: 96px 1fr; }
+.interventions .icard svg { width: 96px; }
+.ex__facts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 6px; color: var(--text-2); font-size: .98rem; }
+.ex .team-text, .ex__step p { font-size: 1.05rem; }
