@@ -361,6 +361,121 @@
   };
   $$('[data-rom]').forEach(el => { el.innerHTML = romSvg(el.dataset.rom); });
 
+  /* ---------- Cartoon ROM demos with a live protractor ---------- */
+  const polar = (c, r, deg) => [c[0] + r * Math.cos(deg * Math.PI / 180), c[1] - r * Math.sin(deg * Math.PI / 180)];
+  const sector = (c, r, a0, a1) => {
+    const p0 = polar(c, r, a0), p1 = polar(c, r, a1);
+    return `M${r1(c[0])} ${r1(c[1])} L${r1(p0[0])} ${r1(p0[1])} A${r} ${r} 0 ${Math.abs(a1 - a0) > 180 ? 1 : 0} ${a1 > a0 ? 0 : 1} ${r1(p1[0])} ${r1(p1[1])}Z`;
+  };
+  const ticks = (c, r, a0, a1, step = 15) => {
+    let d = '';
+    for (let a = a0; a <= a1; a += step) { const p = polar(c, r, a), q = polar(c, r + (a % 45 ? 5 : 9), a); d += `M${r1(p[0])} ${r1(p[1])}L${r1(q[0])} ${r1(q[1])}`; }
+    return `<path d="${d}" stroke="#065A4D" stroke-width="2" stroke-linecap="round"/>`;
+  };
+  const readout = (x, y, deg, label) => `<text x="${x}" y="${y}" font-family="Archivo, sans-serif" font-weight="900" font-size="30" fill="${C.ink}">${Math.round(Math.abs(deg))}°</text><text x="${x}" y="${y + 18}" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#065A4D">${label.toUpperCase()}</text>`;
+
+  const ROM2 = {
+    // Side view: forearm on a table, wrist bends up (extension) and down (flexion)
+    wrist: (opts = {}) => {
+      const W = [196, 132], lo = opts.lo ?? -60, hi = opts.hi ?? 55;
+      const bell = opts.weight ? `<circle cx="244" cy="132" r="19" fill="#3A4456" ${OL}/><circle cx="244" cy="132" r="7" fill="#8E9AAD"/>` : '';
+      const hand = `${bell}${limb(W, [236, 132], 14, 12, C.skin)}${limb([224, 120], [246, 124], 6, 5, C.skin)}${limb([236, 142], [252, 140], 6.5, 6, C.skin)}${limb([234, 120], [250, 112], 5.5, 5, C.skin)}`;
+      const base = `<rect x="0" y="0" width="320" height="230" fill="#F5F3EE"/>
+        <rect x="18" y="148" width="182" height="16" rx="5" fill="#C99E6B" ${OL}/><rect x="34" y="164" width="12" height="54" fill="#B88A55" ${OL}/><rect x="170" y="164" width="12" height="54" fill="#B88A55" ${OL}/>
+        ${ticks(W, 82, -60, 60)}
+        ${limb([40, 132], W, 15, 12, C.skin)}${limb([96, 132], [150, 132], 15.5, 14, C.band)}`;
+      return {
+        frame: p => {
+          const a = lerp(lo, hi, p);
+          return `${base}<path d="${sector(W, 78, 0, a)}" fill="${C.band}" fill-opacity=".35" stroke="#0B7A68" stroke-width="2"/>
+            <g transform="rotate(${r1(-a)} ${W[0]} ${W[1]})">${hand}</g>${dot(W, 6, '#fff')}
+            ${readout(18, 40, a, a >= 0 ? 'Extension' : 'Flexion')}`;
+        }
+      };
+    },
+    // Forearm from above + end-on dial: palm turns down (pronation) and up (supination)
+    prosup: () => {
+      const D = [250, 96];
+      const base = `<rect width="320" height="230" fill="#F5F3EE"/>
+        <circle cx="${D[0]}" cy="${D[1]}" r="48" fill="#fff" ${OL}/>${ticks(D, 48, -90, 90, 15).replace('stroke-width="2"', 'stroke-width="2" transform="rotate(-90 ' + D[0] + ' ' + D[1] + ')"')}
+        <text x="${D[0] - 70}" y="${D[1] + 70}" font-family="JetBrains Mono, monospace" font-size="10" fill="#596476">PALM DOWN</text><text x="${D[0] + 14}" y="${D[1] + 70}" font-family="JetBrains Mono, monospace" font-size="10" fill="#596476">PALM UP</text>
+        ${limb([20, 196], [100, 196], 15, 12, C.skin)}`;
+      return {
+        frame: p => {
+          const a = lerp(-80, 80, p), w = 6 + 15 * Math.abs(Math.sin(a * Math.PI / 180)), up = a > 0;
+          const handFill = up ? '#E2B48C' : C.skin;
+          const needle = polar(D, 40, 90 - a), back = polar(D, 40, 270 - a), palm = polar(D, 16, -a);
+          return `${base}
+            <path d="${sector(D, 46, 90, 90 - a)}" fill="${C.band}" fill-opacity=".35" stroke="#0B7A68" stroke-width="2"/>
+            ${limb(back, needle, 10, 10, C.skin)}${dot(palm, 5, up ? C.band : '#94603F')}
+            <ellipse cx="132" cy="196" rx="32" ry="${r1(w)}" fill="${handFill}" ${OL}/>
+            ${up ? `<path d="M114 196 q18 ${r1(w * .5)} 36 0" fill="none" stroke="#94603F" stroke-width="2"/>` : `<path d="M122 ${r1(196 - w * .5)} v${r1(w)} M134 ${r1(196 - w * .6)} v${r1(w * 1.2)} M146 ${r1(196 - w * .5)} v${r1(w)}" stroke="#94603F" stroke-width="1.6"/>`}
+            ${readout(18, 40, a, up ? 'Supination' : 'Pronation')}`;
+        }
+      };
+    },
+    // Standing player pulls a band from high on one side to low across the body
+    chop: () => {
+      const A = [22, 26], S = [176, 96];
+      const legs = `${limb([176, 150], [156, 204], 11, 9, C.skin2)}${shoe([156, 180], [156, 206], '#DDE3EC')}${limb([176, 150], [198, 204], 11, 9, C.skin)}${shoe([198, 180], [198, 206], '#fff')}`;
+      const arc = `<path d="M${polar(S, 80, 140).map(r1).join(' ')} A80 80 0 0 1 ${polar(S, 80, -35).map(r1).join(' ')}" fill="none" stroke="#0B7A68" stroke-width="2.5" stroke-dasharray="5 6"/>`;
+      return {
+        frame: p => {
+          const th = lerp(140, -35, p), H = polar(S, 74, th), E = polar(S, 40, th + 18);
+          const stretch = dist(A, H) / 220;
+          const sh = [S[0] + p * 6, S[1]];
+          return `<rect width="320" height="230" fill="#F5F3EE"/><rect x="0" y="0" width="14" height="230" fill="#C7C0B2"/><circle cx="${A[0]}" cy="${A[1]}" r="6" fill="#3A4456"/>
+            <rect y="208" width="320" height="22" fill="#E6C394"/>${arc}
+            <path d="${sector(S, 80, 140, th)}" fill="${C.band}" fill-opacity=".25"/>
+            <line x1="${A[0]}" y1="${A[1]}" x2="${r1(H[0])}" y2="${r1(H[1])}" stroke="${C.band}" stroke-width="${r1(7 - stretch * 3)}" stroke-linecap="round"/>
+            ${legs}${limb(sh, [176, 150], 18, 16, C.jersey)}${limb([176, 140], [176, 152], 17, 17, C.shorts)}
+            ${limb(sh, E, 8, 7, C.skin2)}${limb(E, H, 7, 6, C.skin2)}
+            <circle cx="${r1(sh[0] + 2)}" cy="60" r="18" fill="${C.skin}" ${OL}/><path d="M${r1(sh[0] - 16)} 56 Q${r1(sh[0])} 34 ${r1(sh[0] + 18)} 52Z" fill="${C.ink}"/><path d="M${r1(sh[0] - 17)} 53 L${r1(sh[0] + 19)} 50" stroke="${C.band}" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="${r1(sh[0] + 10)}" cy="62" r="2.4" fill="${C.ink}"/>
+            ${limb(sh, polar(S, 36, th + 8), 8.5, 7.5, C.skin)}${limb(polar(S, 36, th + 8), H, 7.5, 6.5, C.skin)}
+            <rect x="${r1(H[0] - 10)}" y="${r1(H[1] - 5)}" width="20" height="10" rx="5" fill="#1A2540" ${OL}/>
+            ${readout(26, 132, 140 - th, 'Arc')}`;
+        }
+      };
+    }
+  };
+  const ROM_MAP = { flex: ['wrist', {}], curl: ['wrist', { weight: 1, lo: -55, hi: 15 }], ext: ['wrist', { weight: 1, lo: -5, hi: 55 }], prosup: ['prosup'], chop: ['chop'] };
+  const live = [];
+  $$('[data-rom]').forEach(el => {
+    const m = ROM_MAP[el.dataset.rom];
+    if (!m) return;
+    const r = ROM2[m[0]](m[1]);
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 320 230');
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', (ROM[el.dataset.rom] || {}).label + '. Animated demo with the angle shown in degrees.');
+    el.replaceChildren(svg);
+    const item = { svg, r, on: false, period: 4200 + Math.random() * 600 };
+    svg.innerHTML = r.frame(reduce ? 1 : 0);
+    live.push(item);
+    if ('IntersectionObserver' in window) new IntersectionObserver(([e]) => { item.on = e.isIntersecting; }).observe(el);
+  });
+  if (live.length && !reduce) {
+    const loop = now => {
+      live.forEach(it => { if (it.on) it.svg.innerHTML = it.r.frame((1 - Math.cos(2 * Math.PI * now / it.period)) / 2); });
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+  }
+
+  /* ---------- Video facades: inline when hosted, YouTube tab when opened from a file ---------- */
+  $$('[data-yt]').forEach(btn => btn.addEventListener('click', () => {
+    const id = btn.dataset.yt;
+    if (!/^https?:$/.test(location.protocol)) { window.open(`https://www.youtube.com/watch?v=${id}`, '_blank', 'noopener'); return; }
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+    f.title = btn.getAttribute('aria-label');
+    f.allow = 'autoplay; encrypted-media; picture-in-picture';
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    f.allowFullscreen = true;
+    btn.replaceWith(f);
+  }));
+
   /* ---------- Icons for intervention cards ---------- */
   $$('[data-icon]').forEach(el => {
     const I = {
