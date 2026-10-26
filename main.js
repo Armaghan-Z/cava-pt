@@ -134,19 +134,23 @@
     const wait = ms => new Promise(res => setTimeout(res, ms));
 
     if (reduce) {
-      set(80); weekEl.textContent = 'Long-term goal';
+      set(80); weekEl.textContent = 'LONG-TERM GOAL';
     } else {
       set(0);
-      // Plays once: baseline, then the week 12 goal, then the long-term goal
       onView([dial], async () => {
-        weekEl.textContent = 'Baseline, week 8';
-        await tween(0, 50, 1100);
-        await wait(700);
-        weekEl.textContent = 'Goal, week 12';
-        await tween(50, 60, 900);
-        await wait(700);
-        weekEl.textContent = 'Long-term goal';
-        await tween(60, 80, 1100);
+        weekEl.textContent = 'WEEK 8 · BASELINE';
+        await tween(0, 50, 1300);
+        for (;;) {
+          await wait(1100);
+          weekEl.textContent = 'WEEK 12 · GOAL';
+          await tween(50, 60, 1200);
+          await wait(1100);
+          weekEl.textContent = 'LONG-TERM GOAL';
+          await tween(60, 80, 1500);
+          await wait(2600);
+          weekEl.textContent = 'WEEK 8 · BASELINE';
+          await tween(80, 50, 1200);
+        }
       }, 0.3);
     }
   }
