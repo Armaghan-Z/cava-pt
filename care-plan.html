@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expected Treatment — CAVA PT</title>
-  <meta name="description" content="Jackson's goals, the measurements we track, his treatment schedule and his care team.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Care Plan — CAVA PT</title>
+  <meta name="description" content="Jackson's phased rehab plan with sets, reps, goals, home exercises and the measurements we track.">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cava.css">
 </head>
 <body>
 
@@ -25,9 +27,10 @@
     <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span></button>
     <ul class="nav__links" id="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="success-story.html">Jackson's Story</a></li>
-      <li><a href="care-plan.html" aria-current="page">Expected Treatment</a></li>
-      <li><a href="exercises.html" class="nav__cta">Recovery Exercises</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="success-story.html">Patient Story</a></li>
+      <li><a href="care-plan.html" aria-current="page">Care Plan</a></li>
+      <li><a href="exercises.html" class="nav__cta">Exercises</a></li>
     </ul>
   </div>
 </header>
@@ -37,198 +40,243 @@
   <section class="page-hero">
     <div class="glow"></div><div class="gridlines"></div>
     <div class="wrap">
-      <div class="crumbs"><a href="index.html">CAVA PT</a><span>/</span><b>Expected Treatment</b></div>
-      <h1>Expected <span class="hl">Treatment</span></h1>
-      <p class="lead">Jackson's goals, how we track his progress, and what his therapy will look like over the next few months.</p>
+      <div class="crumbs"><a href="index.html">CAVA PT</a><span>/</span><b>Care Plan</b></div>
+      <h1>Jackson's Care <span class="hl">Plan</span></h1>
       <div class="meta-row">
-        <span class="meta">Sessions <b>3–4× a week</b></span>
-        <span class="meta">Active PT <b>Weeks 8–12</b></span>
-        <span class="meta">Resistance <b>Months 3–6</b></span>
+        <span class="meta"><span class="tag">Built for Jackson</span></span>
+        <span class="meta">Sport <b>Basketball</b></span>
+        <span class="meta">Wrist flexion now <b>50°</b></span>
+        <span class="meta">Radial deviation now <b>15°</b></span>
       </div>
     </div>
   </section>
 
-  <!-- GOALS -->
+  <!-- Goals -->
   <section class="section">
-    <div class="wrap">
-      <div class="section-head section-head--split">
-        <div>
-          <span class="eyebrow reveal">Goals for the Patient</span>
-          <h2 class="title reveal">What Jackson wants to <span class="hl">achieve</span></h2>
-        </div>
-        <p class="lead reveal">Jackson wants to get his forearm strength and range of motion back so he can play basketball again. We turned that into clear goals we can measure.</p>
+    <div class="wrap ed">
+      <div class="ed__text">
+        <span class="kicker">Goals</span>
+        <p class="team-text">Jackson wants to regain forearm strength and <em class="term" data-term="range of motion">range of motion</em>. He wants to be able to play basketball in the future. In the wrist he wants to get a <em class="term" data-term="flexion">flexion</em> range of motion of 60 degrees. Additionally, he wants to get a radial range of motion of 20 degrees.</p>
       </div>
-      <div class="grid grid-2">
-        <article class="card card--accent card--lift p1 reveal">
-          <div class="card__kicker">Goal 1 · 2 weeks</div>
-          <h3 class="card__title">20° of wrist radial deviation</h3>
-          <p>Get his radial deviation range of motion up to 20 degrees within two weeks.</p>
+      <div class="ed__art grid grid-2">
+        <article class="card card--accent p1"><div class="card__kicker">Short-term goals</div>
+          <ul class="list">
+            <li><strong>By week 2:</strong> Reach 20 degrees of <em class="term" data-term="radial deviation">radial deviation</em> so he can tilt his wrist to dribble.</li>
+            <li><strong>By week 4:</strong> Reach 60 degrees of wrist flexion so he can write, type and drive without stiffness.</li>
+          </ul>
         </article>
-        <article class="card card--accent card--lift p2 reveal">
-          <div class="card__kicker">Goal 2 · 4 weeks</div>
-          <h3 class="card__title">60° of wrist flexion</h3>
-          <p>Get his wrist flexion range of motion up to 60 degrees within four weeks.</p>
-        </article>
-        <article class="card card--accent card--lift p3 reveal">
-          <div class="card__kicker">Goal 3 · Ongoing</div>
-          <h3 class="card__title">Regain forearm strength</h3>
-          <p>Build back the strength and range of motion in his forearm that he lost from the fracture and the time in a cast.</p>
-        </article>
-        <article class="card card--accent card--lift ok reveal">
-          <div class="card__kicker">Goal 4 · Long term</div>
-          <h3 class="card__title">Play basketball again</h3>
-          <p>Get back on the court and play basketball in the future without his arm holding him back.</p>
+        <article class="card card--accent p2"><div class="card__kicker">Long-term goals</div>
+          <ul class="list">
+            <li><strong>By month 6:</strong> Reach 75 to 80 degrees of wrist flexion for a full follow-through on his shot.</li>
+            <li><strong>After surgeon clearance:</strong> Return to full-contact basketball and finish the dunk that injured him.</li>
+          </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ROM TRACKING -->
+  <!-- Phase 1 -->
   <section class="section section--paper2">
     <div class="wrap">
-      <div class="section-head section-head--split">
+      <h2 class="phase-h">Weeks ~ 1-6</h2>
+      <p class="kicker">Range of motion · In clinic 3-4× a week, at home on off days</p>
+
+      <article class="pcard p1">
         <div>
-          <span class="eyebrow reveal">Progress Tracking</span>
-          <h2 class="title reveal">Measurements we <span class="hl">track</span></h2>
+          <p class="muscles">Flexor carpi ulnaris · Flexor carpi radialis · Extensor carpi radialis longus</p>
+          <h3>Wrist Flexion Off of a Table</h3>
+          <p class="orig">Rest forearm on a table with metacarpals and anything more distal hanging off the table with the palm facing down. Bend your wrist up and down slowly, holding each position for around 6 seconds. Repeat for about 8-12 reps at a time</p>
+          <dl class="add">
+            <dt>Sets × reps</dt><dd>2-3 sets of 8-12 reps, 6 second hold</dd>
+            <dt>Where</dt><dd>In clinic and at home</dd>
+            <dt>Goal</dt><dd>Wrist flexion 50° → 60° by week 4</dd>
+            <dt>Modification</dt><dd>Too stiff? Use the left hand to gently guide the wrist</dd>
+            <dt>Video</dt><dd><a href="https://www.youtube.com/watch?v=UGqZedXnQrM" target="_blank" rel="noopener">Wrist flexion &amp; extension demo</a></dd>
+          </dl>
         </div>
-        <p class="lead reveal">We're monitoring two of the ROM measurements taken after his surgery. He shouldn't hit the goals right away. His numbers should go up little by little over the program.</p>
-      </div>
-      <div class="grid grid-2">
-        <article class="card rom p1 reveal">
-          <div class="card__kicker">Wrist Radial Deviation</div>
-          <div class="rom__nums">
-            <div><span>Current</span><b>15°</b></div>
-            <div><span>Goal</span><b class="goal">20°</b></div>
-          </div>
-          <div class="bar"><div class="bar__track"><div class="bar__fill" style="--w:75%"></div></div><span class="bar__val">75%</span></div>
-        </article>
-        <article class="card rom p2 reveal">
-          <div class="card__kicker">Wrist Flexion</div>
-          <div class="rom__nums">
-            <div><span>Current</span><b>50°</b></div>
-            <div><span>Goal</span><b class="goal">75–80°</b></div>
-          </div>
-          <div class="bar"><div class="bar__track"><div class="bar__fill" style="--w:63%"></div></div><span class="bar__val">63%</span></div>
-        </article>
-      </div>
+        <div class="rom-art" data-rom="flex"></div>
+      </article>
+
+      <article class="pcard p1">
+        <div>
+          <p class="muscles">Flexor carpi ulnaris · Flexor carpi radialis · Extensor carpi radialis longus</p>
+          <h3>Wrist circles</h3>
+          <p class="orig">Slow gentle wrist circles clockwise and counterclockwise</p>
+          <dl class="add">
+            <dt>Sets × reps</dt><dd>2 sets of 10 circles each way</dd>
+            <dt>Where</dt><dd>At home, daily warm-up</dd>
+            <dt>Goal</dt><dd>Smooth, pain-free circles in both directions</dd>
+            <dt>Modification</dt><dd>Make the circles smaller if the wrist feels tight</dd>
+          </dl>
+        </div>
+        <div class="rom-art" data-rom="circles"></div>
+      </article>
+
+      <article class="pcard p1">
+        <div>
+          <p class="muscles">Forearm rotators · Brachialis</p>
+          <h3>Forearm <em class="term" data-term="supination">supination</em> and <em class="term" data-term="pronation">pronation</em></h3>
+          <p class="orig">Forearm supination and pronation: Tuck in arm close to side at a 90 degree angle. Slowly rotate forearm back and forth as the palm faces up and down</p>
+          <dl class="add">
+            <dt>Sets × reps</dt><dd>2-3 sets of 10-15 reps</dd>
+            <dt>Where</dt><dd>In clinic and at home</dd>
+            <dt>Goal</dt><dd>Turn palm fully up and fully down. Target degrees: TBD by PT</dd>
+            <dt>Modification</dt><dd>Hold a light hammer or pen to help guide the turn</dd>
+            <dt>Video</dt><dd><a href="https://www.youtube.com/watch?v=AVgLk57TwlQ" target="_blank" rel="noopener">Passive forearm pro/supination</a></dd>
+          </dl>
+        </div>
+        <div class="rom-art" data-rom="prosup"></div>
+      </article>
+
+      <article class="pcard p1">
+        <div>
+          <p class="muscles">Extensor carpi radialis longus</p>
+          <h3>Radial deviation with a light weight <small class="kicker" style="display:inline">Added</small></h3>
+          <dl class="add">
+            <dt>Sets × reps</dt><dd>2-3 sets of 10-15 reps, 1-2 lb</dd>
+            <dt>Where</dt><dd>In clinic, then at home once form is good</dd>
+            <dt>Goal</dt><dd>Radial deviation 15° → 20° by week 2</dd>
+            <dt>Modification</dt><dd>No weight at first; just tilt the hand toward the thumb</dd>
+          </dl>
+        </div>
+        <div class="rom-art" data-rom="dev"></div>
+      </article>
+
+      <article class="pcard p1">
+        <div>
+          <p class="muscles">Flexor carpi ulnaris · Flexor carpi radialis</p>
+          <h3>Grip squeeze with putty <small class="kicker" style="display:inline">Added</small></h3>
+          <dl class="add">
+            <dt>Sets × reps</dt><dd>2 sets of 15 squeezes, 3 second hold</dd>
+            <dt>Where</dt><dd>At home</dd>
+            <dt>Goal</dt><dd>Grip strength closer to the left hand each week</dd>
+            <dt>Modification</dt><dd>Start with soft putty and move to firmer putty</dd>
+          </dl>
+        </div>
+        <div class="rom-art" data-rom="grip"></div>
+      </article>
     </div>
   </section>
 
-  <!-- SCHEDULE -->
+  <!-- Phase 2 -->
   <section class="section">
     <div class="wrap">
-      <div class="section-head section-head--split">
+      <h2 class="phase-h">Weeks ~6 - 12</h2>
+      <p class="kicker">Resistance · In clinic 3-4× a week, at home on off days</p>
+
+      <article class="pcard p2">
         <div>
-          <span class="eyebrow reveal">Treatment Schedule</span>
-          <h2 class="title reveal">How his therapy changes <span class="hl">over time</span></h2>
+          <p class="muscles">Flexor carpi ulnaris · Flexor carpi radialis · Extensor carpi radialis longus</p>
+          <h3>Resistance Exercises</h3>
+          <p class="orig">Wrist curls with increasing resistance over time. Wrist extensions</p>
+          <dl class="add">
+            <dt>Sets × reps</dt><dd>2-3 sets of 10-15 reps</dd>
+            <dt>Where</dt><dd>In clinic with dumbbells, at home with a resistance band</dd>
+            <dt>Goal</dt><dd>Add weight only when 15 reps feel easy</dd>
+            <dt>Modification</dt><dd>Use a band or a water bottle instead of a dumbbell</dd>
+            <dt>Video</dt><dd><a href="https://www.youtube.com/watch?v=UGqZedXnQrM" target="_blank" rel="noopener">Wrist flexion &amp; extension with dumbbell</a></dd>
+          </dl>
         </div>
-        <p class="lead reveal">His fracture was severe and had a lot of displacement, so there's a big loss of soft tissue near the fracture lines. Flexibility should come back a few weeks after starting PT, but strength will take longer, especially for basketball.</p>
-      </div>
-      <div class="grid grid-3">
-        <article class="card card--accent p1 reveal">
-          <div class="card__kicker">Weeks 1–8 · Done</div>
-          <h3 class="card__title">Immobilization</h3>
-          <ul class="list">
-            <li>Arm placed in a cast or splint</li>
-            <li>Gentle finger and shoulder movements to keep from getting stiff</li>
-          </ul>
-        </article>
-        <article class="card card--accent p2 reveal">
-          <div class="card__kicker">Weeks 8–12 · Now</div>
-          <h3 class="card__title">Active PT</h3>
-          <ul class="list">
-            <li><strong>Wrist flexion off a table:</strong> forearm on the table, palm down, hand hanging off. Bend the wrist up and down slowly, holding each spot about 6 seconds, 8–12 reps</li>
-            <li><strong>Wrist circles:</strong> slow and gentle, clockwise and counterclockwise</li>
-            <li><strong>Supination and pronation:</strong> elbow tucked at your side at 90°, slowly turn your palm up and down</li>
-          </ul>
-        </article>
-        <article class="card card--accent p3 reveal">
-          <div class="card__kicker">Months 3–6</div>
-          <h3 class="card__title">Resistance Exercises</h3>
-          <ul class="list">
-            <li>Wrist curls, adding resistance over time</li>
-            <li>Wrist extensions</li>
-            <li><strong>Pressure exercises:</strong> palm flat on a wall, slowly put more body weight onto the wrist</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
+        <div class="grid grid-2"><div class="rom-art" data-rom="curl"></div><div class="rom-art" data-rom="ext"></div></div>
+      </article>
 
-  <!-- WHAT TO EXPECT -->
-  <section class="section section--paper2">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow reveal">Visits</span>
-        <h2 class="title reveal">What to <span class="hl">expect</span></h2>
-      </div>
-      <div class="grid grid-2 photo-pair">
-        <figure class="photo reveal"><img src="images/treat-1.jpg" alt="A physical therapist talking with an athlete during a visit"></figure>
-        <figure class="photo reveal"><img src="images/treat-2.jpg" alt="Physical therapy visit" onerror="this.closest('figure').hidden=true"></figure>
-      </div>
-      <div class="grid grid-2" style="margin-top:20px">
-        <article class="card reveal">
-          <h3 class="card__title">In the office</h3>
-          <p>At your first visit we'll look over your X-rays with you, check how your bones, joints and muscles are healing, and make a plan around your needs and schedule. As you keep coming in, we'll talk about pain, swelling, and how well you can use your arm and hand for everyday things. As you get better, the exercises, reps and intensity go up safely.</p>
-        </article>
-        <article class="card reveal">
-          <h3 class="card__title">How often</h3>
-          <ul class="kv">
-            <li><span class="k">PT sessions</span><span class="v">Every other day, 3–4× a week</span></li>
-            <li><span class="k">Each exercise</span><span class="v">2–3 sets of 10–15 reps</span></li>
-            <li><span class="k">Weight</span><span class="v">Tired, but no pain</span></li>
-            <li><span class="k">Pain or swelling</span><span class="v">Stop right away</span></li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CARE TEAM -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head section-head--split">
+      <article class="pcard p2">
         <div>
-          <span class="eyebrow reveal">Additional Considerations</span>
-          <h2 class="title reveal">Jackson's care <span class="hl">team</span></h2>
+          <p class="muscles">Triceps brachii medial head · Deltoid · Wrist extensors</p>
+          <h3>Pressure exercises</h3>
+          <p class="orig">Put palm flat on a wall and slowly increase body weight onto the wrists</p>
+          <dl class="add">
+            <dt>Sets × reps</dt><dd>2-3 sets of 10 slow leans, 5 second hold</dd>
+            <dt>Where</dt><dd>At home and in clinic</dd>
+            <dt>Goal</dt><dd>Hold body weight on the wrist with no pain</dd>
+            <dt>Modification</dt><dd>Stand closer to the wall to put less weight through the wrist</dd>
+          </dl>
         </div>
-        <p class="lead reveal">Other people Jackson will work with during his recovery, and why they're part of his plan.</p>
-      </div>
-      <div class="grid grid-3">
-        <article class="card card--accent card--lift p1 reveal"><div class="card__kicker">Bone healing</div><h3 class="card__title">Orthopedic Surgeon</h3><p>Monitors his surgical hardware and how the bones are healing.</p></article>
-        <article class="card card--accent card--lift p2 reveal"><div class="card__kicker">Daily activities</div><h3 class="card__title">Occupational / Hand Therapist</h3><p>Helps him rebuild fine motor skills for everyday things like writing and typing.</p></article>
-        <article class="card card--accent card--lift p3 reveal"><div class="card__kicker">Return to sport</div><h3 class="card__title">Athletic Trainer / Strength Coach</h3><p>Later in his recovery, helps him condition safely so he can get back to basketball.</p></article>
-      </div>
+        <div class="rom-art" data-rom="wall"></div>
+      </article>
     </div>
   </section>
 
-  <!-- BEYOND EXERCISE -->
+  <!-- Phase 3 (added) -->
   <section class="section section--ink">
     <div class="glow"></div>
     <div class="wrap">
-      <div class="section-head section-head--split">
-        <div>
-          <span class="eyebrow reveal">Beyond Exercise</span>
-          <h2 class="title reveal">Other things that <span class="hl">help</span></h2>
-        </div>
-        <p class="lead reveal">Exercise isn't the only part of recovery. These help protect his arm, his confidence and his healing.</p>
+      <h2 class="phase-h" style="color:#fff">Weeks ~12+</h2>
+      <p class="kicker">Return to sport · Only after surgeon clearance</p>
+      <div class="grid grid-3">
+        <article class="bento__card"><div class="rom-art" data-rom="ball"></div><h3 style="margin-top:14px">Ball handling</h3><p>2-3 sets of 30 seconds, stationary then moving.</p></article>
+        <article class="bento__card"><div class="rom-art" data-rom="chop"></div><h3 style="margin-top:14px">Diagonal band chop and overhead catching</h3><p>2-3 sets of 10-12 each side. <a href="https://www.youtube.com/watch?v=wqsVizbbh_0" target="_blank" rel="noopener" style="color:var(--mint)">Video</a></p></article>
+        <article class="bento__card"><div class="rom-art" data-rom="shoot"></div><h3 style="margin-top:14px">Progressive shooting</h3><p>Form shots close in, then free throws, then jump shots. Dunks last.</p></article>
       </div>
-      <div class="bento">
-        <article class="bento__card reveal" data-spotlight>
-          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <h3>Wrist Orthotics</h3>
-          <p>A custom wrist orthotic and ergonomic devices protect his arm during daily things like typing and studying.</p>
-        </article>
-        <article class="bento__card reveal" data-spotlight>
-          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <h3>Sports Psychology</h3>
-          <p>Mental resilience coaching helps him deal with the fear of getting hurt again when he goes back to things like dunking.</p>
-        </article>
-        <article class="bento__card reveal" data-spotlight>
-          <div class="bento__icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-          <h3>Hydrotherapy &amp; Laser Therapy</h3>
-          <p>Contrast hydrotherapy and low-level laser therapy can speed up soft tissue healing and keep inflammation down.</p>
-        </article>
+    </div>
+  </section>
+
+  <!-- Home vs clinic -->
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <span class="kicker">At home</span>
+          <h3 class="card__title">On off days</h3>
+          <ul class="list">
+            <li>Wrist flexion off a table</li>
+            <li>Wrist circles</li>
+            <li>Supination and pronation</li>
+            <li>Grip squeeze with putty</li>
+            <li>Wall pressure (weeks ~6-12)</li>
+          </ul>
+        </div>
+        <div>
+          <span class="kicker">In clinic</span>
+          <h3 class="card__title">With the PT</h3>
+          <ul class="list">
+            <li>Goniometer measurements every visit</li>
+            <li>Radial deviation with a light weight</li>
+            <li>Wrist curls and extensions with dumbbells</li>
+            <li>Return-to-sport drills after clearance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tracking -->
+  <section class="section section--paper2">
+    <div class="wrap ed">
+      <div class="ed__wide">
+        <span class="kicker">Progress we measure</span>
+        <h2 class="title" style="margin-bottom:24px">Tracked every <span class="hl">visit</span></h2>
+        <div class="track-wrap">
+          <table class="track">
+            <thead><tr><th>Measure</th><th>Start</th><th>Week 2</th><th>Week 4</th><th>Month 6</th><th>How</th></tr></thead>
+            <tbody>
+              <tr><td>Wrist flexion</td><td>50°</td><td>TBD by PT</td><td>60°</td><td>75-80°</td><td>Goniometer, every visit</td></tr>
+              <tr><td>Radial deviation</td><td>15°</td><td>20°</td><td>20°</td><td>20°</td><td>Goniometer, every visit</td></tr>
+              <tr><td>Supination / pronation</td><td>TBD by PT</td><td>TBD by PT</td><td>TBD by PT</td><td>TBD by PT</td><td>Goniometer, every visit</td></tr>
+              <tr><td>Grip strength</td><td>TBD by PT</td><td>TBD by PT</td><td>TBD by PT</td><td>Close to left hand</td><td>Compared with the other hand</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to expect -->
+  <section class="section">
+    <div class="wrap ed">
+      <div class="ed__text">
+        <span class="kicker">What to expect/frequency of exercises:</span>
+        <h2 class="title">How often, how <span class="hl">hard</span></h2>
+      </div>
+      <div class="ed__art">
+        <ul class="list team-text">
+          <li>Sessions of PT every other day around 3-4 times a week</li>
+          <li>Stop doing exercises immediately if pain or swelling occurs</li>
+          <li>2-3 sets for 10-15 reps based on ability that day for each exercise</li>
+          <li>Use weights and resistance that makes the muscles/arms feel tired but doesn't hurt</li>
+          <li>Strengthening will take time as the fracture was severe with severe amounts of displacement, meaning there is a major loss in soft tissue near and on the fracture lines thus it will takes lots of time to return back to full function especially playing basketball again</li>
+          <li>Flexibility should return in a few weeks after starting PT</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -236,8 +284,8 @@
   <section class="section section--tight">
     <div class="wrap">
       <nav class="pager" aria-label="Page navigation">
-        <a href="success-story.html" class="prev"><span class="pager__label">Previous</span><span class="pager__title"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Jackson's Story</span></a>
-        <a href="exercises.html" class="next"><span class="pager__label">Next</span><span class="pager__title">Recovery Exercises<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        <a href="success-story.html" class="prev"><span class="pager__label">Previous</span><span class="pager__title"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Patient Story</span></a>
+        <a href="exercises.html" class="next"><span class="pager__label">Next</span><span class="pager__title">Exercises<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
       </nav>
     </div>
   </section>
@@ -254,7 +302,7 @@
       </div>
       <div>
         <h4>Pages</h4>
-        <ul><li><a href="index.html">Home</a></li><li><a href="success-story.html">Jackson's Story</a></li><li><a href="care-plan.html">Expected Treatment</a></li><li><a href="exercises.html">Recovery Exercises</a></li></ul>
+        <ul><li><a href="index.html">Home</a></li><li><a href="our-story.html">Our Story</a></li><li><a href="success-story.html">Patient Story</a></li><li><a href="care-plan.html">Care Plan</a></li><li><a href="exercises.html">Exercises</a></li></ul>
       </div>
       <div>
         <h4>Our Team</h4>
@@ -263,9 +311,13 @@
     </div>
     <div class="footer__word" aria-hidden="true">CAVA.PT</div>
     <div class="footer__bottom"><span>HBS 1.3.1 · PLTW Physical Therapy — Design a Plan</span><span>&copy; 2026 CAVA PT</span></div>
+    <p class="disclaimer">Educational project for PLTW Human Body Systems. Fictional practice and patient case. Not medical advice.</p>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="main.js"></script>
+<script src="cava.js"></script>
 </body>
 </html>
